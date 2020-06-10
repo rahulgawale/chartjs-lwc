@@ -13,7 +13,7 @@ export default class Chart extends LightningElement {
 			return;
 		}
         // load static resources.
-		Promise.all([loadScript(this, chartjs + '/dist/Chart.bundle.min.js')])
+		Promise.all([loadScript(this, chartjs)])
 			.then(() => {
                 this.isChartJsInitialized = true;
 				const ctx = this.template.querySelector('canvas.barChart').getContext('2d');
